@@ -27,6 +27,10 @@ module Utils
     def parse!
       @optparse.parse!
     end
+
+    def [](label)
+      @options[label]
+    end
   end
 end
 
@@ -44,6 +48,10 @@ module Connection
     def sock_bind(queue = 10)
       bind(@sockaddr)
       listen(queue)
+    end
+
+    def sock_connect
+      connect(@sockaddr)
     end
   end
 end
