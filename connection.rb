@@ -53,6 +53,13 @@ module Connection
     def sock_connect
       connect(@sockaddr)
     end
+
+    def self.self_ip
+      addr_lists = Socket.ip_address_list
+      # addr_lists[1] && addr_lists[1].ip_address.empty? ? addr_lists[0].ip_address : addr_lists[1].ip_address
+      # for test using localhost
+      addr_lists[0].ip_address
+    end
   end
 end
 

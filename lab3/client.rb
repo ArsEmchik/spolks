@@ -70,5 +70,5 @@ end
 opts = Utils::ArgParser.new
 opts.parse!
 
-server = Client.new(opts[:port] || 2003, opts[:addr] || '127.0.0.1')
-server.send_file('test.txt')
+# server = Client.new(opts[:port] || 2003, opts[:addr] || '192.168.43.18')
+server.send_file('big.exe')
